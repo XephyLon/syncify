@@ -192,7 +192,7 @@
     "cSpell.userWords": [
         "Ngrid"
     ],
-    "editor.fontFamily": "Cascadia Code, Operator Mono, Iosevka Custom",
+    "editor.fontFamily": "Tajawal, Cascadia Code, Operator Mono, Iosevka Custom",
     "editor.fontLigatures": true,
     "vscode_custom_css.imports": [
         "file:///Users/mahmoud/Desktop/styles.css"
@@ -224,5 +224,8 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "chronicler.ffmpeg-binary": "c:\\Users\\mahmoud\\Downloads/ffmpeg.exe",
-    "sync.gist": "a6d63833d9a1a2de32a27799d2f8bb50"
+    "sync.gist": "a6d63833d9a1a2de32a27799d2f8bb50",
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
