@@ -1,6 +1,7 @@
 {
     "atomKeymap.promptV3Features": true,
     "editor.multiCursorModifier": "ctrlCmd",
+    // . . .
     "editor.overviewRulerBorder": false,
     "editor.overviewRulerLanes": 1,
     "editor.tokenColorCustomizations": {
