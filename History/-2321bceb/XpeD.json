@@ -106,7 +106,7 @@
         
     },
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.iconTheme": "catppuccin-mocha",
+    "workbench.iconTheme": "material-icon-theme",
     "editor.smoothScrolling": true,
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -125,7 +125,7 @@
     
     "vscode_custom_css.policy": true,
     "vsicons.dontShowNewVersionMessage": true,
-    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.colorTheme": "Community Material Theme Darker",
     "todo-tree.highlights.customHighlight": {
         "FIXME": {},
         "TODO": {}
@@ -207,6 +207,7 @@
     "sonarlint.ls.javaHome": "c:\\Users\\mahmoud\\.vscode\\extensions\\sonarsource.sonarlint_managed-jre\\jre\\jdk-11.0.8+10-jre",
     "oneDarkPro.bold": true,
     "sass.snippets.path": "d:\\repos/sass-snippets.json",
+    "terminal.integrated.fontFamily": "Operator Mono Lig, Iosevka Custom, MesloLGS NF",
     "sonarlint.rules": {
         "typescript:S2201": {
             "level": "off"
@@ -230,6 +231,5 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "terminal.integrated.shellIntegration.suggestEnabled": true,
-    "terminal.integrated.defaultProfile.linux": "zsh",
-    "terminal.integrated.fontFamily": "MesloLGS NF"
+    "terminal.integrated.defaultProfile.linux": "zsh"
 }

@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Satisfy&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You can add global styles to this file, and also import other style files */
+
+@layer utilities {
+  .rad-4 {
+    border-radius: 0.25rem 0.25rem 0.25rem 0;
+  }
+
+  .rad-8 {
+    border-radius: 0.5rem 0.5rem 0.5rem 0;
+  }
+
+  .rad-12 {
+    border-radius: 0.75rem 0.75rem 0.75rem 0;
+  }
+
+  .rad-16 {
+    border-radius: 1rem 1rem 1rem 0;
+  }
+
+  .rad-20 {
+    border-radius: 1.25rem 1.25rem 1.25rem 0;
+  }
+
+  .rad-24 {
+    border-radius: 1.5rem 1.5rem 1.5rem 0;
+  }
+}
+
+@layer components {
+  .checkbox {
+    @apply rounded-4 border-n-300 w-5 h-5;
+  }
+  .checkbox:checked,
+  .checkbox[checked='true'] {
+    @apply bg-[length:50%] bg-center;
+  }
+
+  .radio {
+    @apply bg-n-50;
+  }
+  .radio-primary {
+    @apply bg-pb-50;
+  }
+
+  .radio-secondary {
+    @apply bg-inb-50;
+  }
+
+  .radio-accent {
+    @apply bg-gl-50;
+  }
+
+  .radio:checked,
+  .radio[aria-checked='true'] {
+    box-shadow: 0 0 0 6px hsl(var(--b1)) inset, 0 0 0 6px hsl(var(--b1)) inset;
+  }
+
+  .btn {
+    @apply rounded-12 py-4 px-5 text-ar-L1-bold;
+  }
+
+  .btn-primary {
+    @apply text-n-25;
+  }
+
+  .btn-primary:hover {
+    @apply bg-pb-400 border-pb-400;
+  }
+
+  .btn-secondary:hover {
+    @apply bg-inb-400 border-inb-400;
+  }
+
+  .btn-accent:hover {
+    @apply bg-gl-400 border-gl-400;
+  }
+
+
+}

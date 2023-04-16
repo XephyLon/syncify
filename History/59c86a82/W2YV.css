@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Satisfy&display=swap');
+
+@font-face{
+  font-family: 'Brando Arabic';
+  src: url("assets/fonts/alfont_com_Brando-Arabic-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face{
+  font-family: 'Brando Arabic';
+  src: url("assets/fonts/alfont_com_Brando-Arabic-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face{
+  font-family: 'Brando Arabic';
+  src: url("assets/fonts/alfont_com_Brando-Arabic-text.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face{
+  font-family: 'Ghalam2';
+  src: url("assets/fonts/Ghalam-2.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You can add global styles to this file, and also import other style files */
+
+@layer base {
+  body {
+    font-family: 'Inter';
+  }
+
+  body[dir="rtl"] {
+    font-family: 'Brando Arabic', 'Ghalam2';
+  }
+}
+
+@layer utilities {
+  .rad-4 {
+    border-radius: 0.25rem 0.25rem 0.25rem 0;
+  }
+
+  .rad-8 {
+    border-radius: 0.5rem 0.5rem 0.5rem 0;
+  }
+
+  .rad-12 {
+    border-radius: 0.75rem 0.75rem 0.75rem 0;
+  }
+
+  .rad-16 {
+    border-radius: 1rem 1rem 1rem 0;
+  }
+
+  .rad-20 {
+    border-radius: 1.25rem 1.25rem 1.25rem 0;
+  }
+
+  .rad-24 {
+    border-radius: 1.5rem 1.5rem 1.5rem 0;
+  }
+}
+
+@layer components {
+  .checkbox {
+    @apply rounded-4 border-n-300 w-5 h-5;
+  }
+  .checkbox:checked,
+  .checkbox[checked='true'] {
+    @apply bg-[length:50%] bg-center;
+  }
+
+  .radio {
+    @apply bg-n-50;
+  }
+  .radio-primary {
+    @apply bg-pb-50;
+  }
+
+  .radio-secondary {
+    @apply bg-inb-50;
+  }
+
+  .radio-accent {
+    @apply bg-gl-50;
+  }
+
+  .radio:checked,
+  .radio[aria-checked='true'] {
+    box-shadow: 0 0 0 6px hsl(var(--b1)) inset, 0 0 0 6px hsl(var(--b1)) inset;
+  }
+
+  .btn {
+    @apply rounded-12 text-ar-L1-bold;
+  }
+
+  .btn-ghost.btn-primary:hover {
+    @apply bg-pb-50
+  }
+
+  .btn-ghost.btn-secondary:hover {
+    @apply bg-inb-25
+  }
+
+  .btn-ghost.btn-accent:hover {
+    @apply bg-gl-50
+  }
+
+  .btn-link.btn-primary[disabled] {
+    @apply bg-n-25 text-pb-100
+  }
+
+  .btn-link.btn-secondary[disabled] {
+    @apply bg-n-25 text-inb-100
+  }
+
+  .btn-link.btn-accent[disabled] {
+    @apply bg-n-25 text-gl-100
+  }
+
+  .input, .textarea {
+    @apply shadow-input rounded-4
+  }
+
+
+  .tabs-boxed {
+    @apply gap-[inherit] bg-inb-25
+  }
+
+  .tab:hover {
+    @apply bg-pb-50 transition
+  }
+}

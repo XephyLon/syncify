@@ -48,7 +48,6 @@
     "breadcrumbs.enabled": false,
     "workbench.colorCustomizations": {
         "activityBar.background": "#00000040",
-        "window.background": "#00000040",
         "activityBar.border": "#00000000",
         "breadcrumb.background": "#00000000",
         "button.background": "#00000040",
@@ -106,7 +105,7 @@
         
     },
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.iconTheme": "catppuccin-mocha",
+    "workbench.iconTheme": "material-icon-theme",
     "editor.smoothScrolling": true,
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -125,7 +124,7 @@
     
     "vscode_custom_css.policy": true,
     "vsicons.dontShowNewVersionMessage": true,
-    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.colorTheme": "Community Material Theme Darker",
     "todo-tree.highlights.customHighlight": {
         "FIXME": {},
         "TODO": {}
@@ -194,7 +193,7 @@
     "cSpell.userWords": [
         "Ngrid"
     ],
-    "editor.fontFamily": "Operator Mono Lig, Cascadia Code, Operator Mono, Iosevka Custom",
+    "editor.fontFamily": "Tajawal, Cascadia Code, Operator Mono, Iosevka Custom",
     "editor.fontLigatures": true,
     "vscode_custom_css.imports": [
         "file:///Users/mahmoud/Desktop/styles.css"
@@ -207,6 +206,7 @@
     "sonarlint.ls.javaHome": "c:\\Users\\mahmoud\\.vscode\\extensions\\sonarsource.sonarlint_managed-jre\\jre\\jdk-11.0.8+10-jre",
     "oneDarkPro.bold": true,
     "sass.snippets.path": "d:\\repos/sass-snippets.json",
+    "terminal.integrated.fontFamily": "Cascadia Code, Operator Mono, Iosevka Custom, MesloLGS NF",
     "sonarlint.rules": {
         "typescript:S2201": {
             "level": "off"
@@ -228,8 +228,5 @@
     "sync.gist": "a6d63833d9a1a2de32a27799d2f8bb50",
     "[jsonc]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "terminal.integrated.shellIntegration.suggestEnabled": true,
-    "terminal.integrated.defaultProfile.linux": "zsh",
-    "terminal.integrated.fontFamily": "MesloLGS NF"
+    }
 }

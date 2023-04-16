@@ -1,0 +1,140 @@
+{
+  "name": "alemtiaz",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "sdb",
+  "sourceRoot": "apps/alemtiaz/src",
+  "tags": [],
+  "i18n": {
+    "sourceLocale": "ar-SA",
+    "locales": {"en-US": "apps/alemtiaz/src/locale/messages.en.json"}
+  },
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/alemtiaz",
+        "index": "apps/alemtiaz/src/index.html",
+        "main": "apps/alemtiaz/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/alemtiaz/tsconfig.app.json",
+        "assets": ["apps/alemtiaz/src/favicon.ico", "apps/alemtiaz/src/assets"],
+        "styles": ["apps/alemtiaz/src/styles.css"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "alemtiaz:build:production"
+        },
+        "development": {
+          "browserTarget": "alemtiaz:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "alemtiaz:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/alemtiaz/**/*.ts", "apps/alemtiaz/**/*.html"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/alemtiaz/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "serve-static": {
+      "executor": "@nrwl/web:file-server",
+      "options": {
+        "buildTarget": "alemtiaz:build"
+      }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/alemtiaz/.storybook",
+        "browserTarget": "alemtiaz:build",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/alemtiaz",
+        "configDir": "apps/alemtiaz/.storybook",
+        "browserTarget": "alemtiaz:build",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "static-storybook": {
+      "executor": "@nrwl/web:file-server",
+      "options": {
+        "buildTarget": "alemtiaz:build-storybook",
+        "staticFilePath": "dist/storybook/alemtiaz"
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "alemtiaz:build-storybook:ci"
+        }
+      }
+    }
+  }
+}
